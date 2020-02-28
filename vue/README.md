@@ -52,3 +52,22 @@ git branch -d [branch name]
 git status
 ```
 
+### Github 本地分支合并到线上主分支
+
+```py
+https://www.cnblogs.com/aiyr/p/10055448.html
+如果是在本地index-swiper分支上，已经写好了那么：
+
+1，git add .         　　　　　　　　　　   //提交到本地缓冲区
+
+2，git commit -m "project init" 　　　　//把本地缓冲区提交到本地仓库
+
+3，git push 　　　　　　　　　　　　　//把分支推送至到github         如果是第一次提交： git push  --set-upstream origin index-icons，放心如果不加的话也提交不成功。
+
+4，git checkout master 　　　　　　　　// 先切换到master分支
+5，git merge origin/index-swiper 　　　　// 把线上index-swiper分支上的内容合并到本地master分支          这里origin/index-swiper代表线上的Index-swiper分支，git merge代表想跟哪个分支合并。在哪个环境下就合并哪个
+6，git push　　　　 　　　　　　　　　　// 将本地master分支push到线上master分支
+```
+
+
+
