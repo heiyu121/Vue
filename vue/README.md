@@ -58,15 +58,17 @@ git status
 https://www.cnblogs.com/aiyr/p/10055448.html
 如果是在本地index-swiper分支上，已经写好了那么：
 
-1，git add .         　　　　　　　　　　   //提交到本地缓冲区
+提交项目（目前在分支内）的一般流程：
+1，git add .   //提交到本地缓冲区
 
-2，git commit -m "project init" 　　　　//把本地缓冲区提交到本地仓库
+2，git commit -m "project init" //把本地缓冲区提交到本地仓库
 
-3，git push 　　　　　　　　　　　　　//把分支推送至到github         如果是第一次提交： git push  --set-upstream origin index-icons，放心如果不加的话也提交不成功。
-
-4，git checkout master 　　　　　　　　// 先切换到master分支
-5，git merge origin/index-swiper 　　　　// 把线上index-swiper分支上的内容合并到本地master分支          这里origin/index-swiper代表线上的Index-swiper分支，git merge代表想跟哪个分支合并。在哪个环境下就合并哪个
-6，git push　　　　 　　　　　　　　　　// 将本地master分支push到线上master分支
+3，git push //把分支推送至到github
+	如果是第一次提交则使用： git push  --set-upstream origin index-icons，index-icons是分支名称。
+4，git push   //master到线上仓库
+5，git checkout master// 先切换到master分支
+6，git merge origin/index-swiper 　// 把线上index-swiper分支上的内容合并到本地master分支,这里origin/index-swiper代表线上的Index-swiper分支，git merge代表想跟哪个分支合并。在哪个环境下就合并哪个
+6，git push　// 将本地master分支push到线上master分支
 ```
 
 
